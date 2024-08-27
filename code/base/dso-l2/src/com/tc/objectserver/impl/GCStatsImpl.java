@@ -150,7 +150,7 @@ public class GCStatsImpl implements GCStats, Serializable {
     this.deleteStageTime = aDeleteStageTime;
   }
 
-  private String formatAsDate(long date) {
+  private synchronized String formatAsDate(long date) {
     return printFormat.format(date);
   }
 
